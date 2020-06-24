@@ -1,0 +1,34 @@
+set集合：作用是去重，集合中不能存放重复的元素，用{}进行存储元素，向集合中添加元素用set.add（“添加的元素”）方法，set.update（）方法可以往集合中添加一个列表，删除用set.remove（）方法
+list列表：可以放任何数据，用[]进行存储。list.count()：这方法会返回一个元素在集合中的次数
+tuple元组：元组一旦创建，就不能进行任何的增删改等操作用（）进行存储
+dict字典：{key：value}字典是存储键值对的，那字典的值用key拿，key就是字典的索引、
+for循环遍历字典时用dict.items（）方法创建两个变量分别接收字典的key和value如：for k,v in dict.items():
+迭代器：iter
+i=iter（）函数，括号里面放要循环的数据，如列表，元组，集合等....输出用next（i），他会用自己的方式输出一个元素出来
+enumerate枚举；用两个变量接收第一个接收元素的索引位置，第二个接收元素如：for i,x in enumerate(循环的对象)
+函数的参数一个*代表一个列表可以放很多个值，两个**代表放入的参数得是key=value的形式的字典，也可以放入多个值
+字符串的连字符是sep=“用什么连接”end函数是默认不换行
+内置函数：max（）返回最大值，min（）返回最小值，sum（）求和，len（）返回集合或者字符串的长度，type（）查看数据类型，help（）查看函数的文档
+sorted（）按照从小到大排序，ord（）将字符转换成ASCII码，chr（）将ASCII码转换成字符，abs（）返回绝对值，eval（）将放入的元素转换成字符串对应的反向操作repr（）将字符串转换成他原来的类型
+打包成exe文件代码：pyinstaller -F xx.py   xx是要打包的文件名
+云端jupyter运行的代码    jupyter notebook  --no-browser --allow-root
+b站下载代码：you-get	 -i url
+异常处理是try块，相当于一个if语句  格式：
+try：
+	可能会发生异常的代码
+except :
+	出现异常后执行的代码，如果没出现异常就不会执行此代码块
+对文件进行操作：
+打开文件：f=open("文件路径加文件名字.txt","r",encoding='utf-8')r=read  阅读
+	ls=f.read()
+	print(ls)
+	f.claose()  关闭文件
+写入新的文件：f=open("文件路径加文件名字.txt","w",encoding='utf-8') w=weite 最加就把w换成a   a=append
+	f.weite(“写入文件的内容”)
+	f.claose()  关闭保存文件
+scrapy框架运行步骤：
+1：scrapy startproject  xxxx文件名    创建一个xxx的文件
+2：cd   xxx文件名    进入这个文件的目录
+3： scrapy genspider company   域名 如：51job.com        创建一个company的文件和你要爬取数据的网址
+4：将你写的爬虫代码放入company文件中，注意格式   修改settings.py文件中的请求头数据
+5：修改完成后开始爬取数据：scrapy crawl company
